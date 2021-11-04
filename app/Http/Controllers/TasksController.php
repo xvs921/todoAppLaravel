@@ -17,7 +17,8 @@ class TasksController extends Controller
     }
 
     public function ready() {
-        $tasks = Task::where('id'->$id)
+        $value = 1;
+        $tasks = Task::where('completed'->$value)
             ->orderBy('id','DESC')
             ->get();
         return view('tasks.index', [
@@ -26,7 +27,8 @@ class TasksController extends Controller
     }
 
     public function todo() {
-        $tasks = Task::where('id'->$id)
+        $value = 0;
+        $tasks = Task::where('completed'-> $value)
             ->orderBy('id','DESC')
             ->get();
         return view('tasks.index', [
