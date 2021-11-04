@@ -12,5 +12,14 @@
     <div class="form-group">
       <button type="submit" class="btn btn-primary">Create Task</button>
     </div>
+    @if($errors->any())
+    <div class="alert alert-danger" role="alert">
+      <ul>
+        @foreach($errors->all() as $error)
+          <li>{{ $error }}</li>
+        @endforeach
+      </ul>
+    </div>
+    @endif
   </form>
   @endsection

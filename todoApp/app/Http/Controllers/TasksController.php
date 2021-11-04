@@ -3,11 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Task;
 
 class TasksController extends Controller
 {
     public function index() {
-        return view('tasks.index');
+        $tasks = Task::orderBy('completed','DESC')
+            ->orderBy('id','DESC')
+            ->get();
+        return view('tasks.index', [
+            'tasks' => $tasks,
+        ]);
     }
 
     public function create() {
@@ -18,12 +24,26 @@ class TasksController extends Controller
         request()->validate([
             'description' => 'required|max:255',
         ]);
-
+        
         Task::create([
             'description' => request('description'),
         ]);
 
-        return redirect('/');
+        $this->index();
     }
 
+    public function update() {
+
+        $task = Task::where('id'->$id)->first();
+        $task->completed = !$task->completed;
+        $task->save();
+        $this->index();
+    }
+
+    public function delete() {
+
+        $task = Task::where('id'->$id)->first();
+        $task->delete();
+        $this->index();
+    }
 }
