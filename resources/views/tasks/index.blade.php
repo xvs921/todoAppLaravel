@@ -8,7 +8,7 @@
 	grid-gap: 20px;
 }
 .ready{
-	--card-bg-color: lightgreen;
+	--card-bg-color: green;
 }
 .todo{
 	--card-bg-color: red;
