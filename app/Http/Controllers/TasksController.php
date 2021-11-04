@@ -60,16 +60,14 @@ class TasksController extends Controller
     }
 
     public function update($id) {
-        $id = (int)$id;
-        $task = Task::where('id'->$id)->first();
+        $task = Task::where('id', $id)->first();
         $task->completed = $task->completed == true ? false : true;
         $task->save();
         $this->index();
     }
 
     public function delete($id) {
-        $id = (int)$id;
-        $task = Task::where('id'->$id)->first();
+        $task = Task::where('id', $id)->first();
         return $task;
         //$task->delete();
         //$this->index();
