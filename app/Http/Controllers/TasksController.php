@@ -17,18 +17,27 @@ class TasksController extends Controller
     }
 
     public function ready() {
-        $tasks = Task::where('completed'->true)
+        $alltasks = Task::orderBy('completed','DESC')
             ->orderBy('id','DESC')
             ->get();
+        $tasks = [];
+        foreach ($alltasks as $t) {
+            if($t->completed == true) array_push($tasks,$t);
+        }
         return view('tasks.index', [
             'tasks' => $tasks,
         ]);
     }
 
     public function todo() {
-        $value = false;
-        $tasks = Task::where('completed'->$value)
+        $alltasks = Task::orderBy('completed','DESC')
+            ->orderBy('id','DESC')
             ->get();
+        //$tasks = Task::where('completed'->false)->get();
+        $tasks = [];
+        foreach ($alltasks as $t) {
+            if($t->completed == false) array_push($tasks,$t);
+        }
         return view('tasks.index', [
             'tasks' => $tasks,
         ]);
