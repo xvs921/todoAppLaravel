@@ -53,13 +53,13 @@ class TasksController extends Controller
         $task = Task::where('id', $id)->first();
         $task->completed = $task->completed == true ? false : true;
         $task->save();
-        return Redirect::back()->withMessage('Success');
+        return redirect()->back()->with('success', 'success update');
     }
 
     public function delete($id) {
         $task = Task::where('id', $id)->first();
         $task->delete();
-        return Redirect::back()->withMessage('Success');
+        return redirect()->back()->with('success', 'success delete');
     }
 
     public function openEdit($id) {
