@@ -2,8 +2,7 @@
 
 use Illuminate\Support\Str;
 
-$url = parse_url(getenv("https://www.cleardb.com/database/details?id=5D1F864098D4A96853D0F5DD258D70D7"));
-$host = $url["host"] ?? null;
+$host = 'eu-cdbr-west-01.cleardb.com';
 $username = 'bbcf7b033611ec';
 $password = '6e9c58e1';
 $database = 'heroku_228bd99ed66e7dd';
