@@ -11,15 +11,15 @@
 				<p>{{ $t->description }}</p>
                 <form action="/tasks/{{ $t->id }}" method="GET">
                     @method('GET')
-                    <button class="btn btn-error btn-block" input="submit">Modify</button>
+                    <button class="btn btn-info btn-lg" input="submit">Modify</button>
                 </form>
                 <form action="/tasks/{{ $t->id }}" method="POST">
                     @method('PATCH')
-                    <button class="btn btn-light btn-block" input="submit">Complete</button>
+                    <button class="btn btn-light btn-lg" input="submit">Complete</button>
                 </form>
                 <form action="/tasks/{{ $t->id }}" method="DELETE">
                     @method('DELETE')
-                    <button class="btn btn-error btn-block" input="submit">Delete</button>
+                    <button class="btn btn-danger btn-lg" input="submit">Delete</button>
                 </form>
             </div>
 		</div>
