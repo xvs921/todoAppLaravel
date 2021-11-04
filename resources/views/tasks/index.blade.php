@@ -18,7 +18,6 @@
 	position: relative;
 	width: 350px;
 	margin: 0 auto;
-	background: red;
 	padding: 20px;
 	box-sizing: border-box;
 	text-align: center;
