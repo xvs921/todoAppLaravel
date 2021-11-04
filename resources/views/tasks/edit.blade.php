@@ -3,8 +3,8 @@
 @section('content')
 <h1>Edit Task</h1>
 
-<form method="POST" action="/tasks/updateAll">
-    @method('PUT') 
+<form method="POST" action="/tasks/edit/{{ $task->id }}">
+    @method('PATCH') 
     @csrf
     <div class="form-group">
       <label for="description">Task Description</label>
