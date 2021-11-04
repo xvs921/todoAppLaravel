@@ -2,7 +2,7 @@
 <style>
 .testimonials
 {
-	margin: 200px auto 100px;
+	margin: 50px auto 100px;
 	display: grid;
 	grid-template-columns: repeat( auto-fit, minmax(350px, 1fr));
 	grid-gap: 20px;
@@ -43,8 +43,6 @@
 </style>
 
 @section('content')
-    <h1>Hello Task app</h1>
-
     <div class='testimonials'>
     @foreach($tasks as $t)
 		<div class="{{ $t->completedClassFind() }}">
