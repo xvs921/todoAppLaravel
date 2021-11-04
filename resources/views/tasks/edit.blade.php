@@ -4,7 +4,7 @@
 <h1>Edit Task</h1>
 
 <form method="POST" action="/tasks/updateAll">
-    @method('PATCH') 
+    @method('PUT') 
     @csrf
     <div class="form-group">
       <label for="description">Task Description</label>

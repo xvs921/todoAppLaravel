@@ -14,4 +14,4 @@ Route::patch('/tasks/{id}', 'App\Http\Controllers\TasksController@update');
 Route::delete('/tasks/{id}', 'App\Http\Controllers\TasksController@delete');
 
 Route::get('/tasks/{id}', 'App\Http\Controllers\TasksController@openEdit');
-Route::patch('/tasks/updateAll/{{id}}', 'App\Http\Controllers\TasksController@edit');
+Route::put('/tasks/{{id}}', 'App\Http\Controllers\TasksController@edit');
