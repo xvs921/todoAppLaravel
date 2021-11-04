@@ -85,12 +85,12 @@
                     @method('GET')
                     <button class="btn btn-info btn-lg" input="submit">Modify</button>
                 </form>
-                <form action="/tasks/update/{{ $t->id }}" method="POST">
+                <form action="/tasks/{{ $t->id }}" method="POST">
 					@csrf
                     @method('PATCH')
                     <button class="btn btn-light btn-lg" input="submit">Complete</button>
                 </form>
-                <form action="/tasks/delete/{{ $t->id }}" method="DELETE">
+                <form action="/tasks/{{ $t->id }}" method="DELETE">
 					@csrf
                     @method('DELETE')
                     <button class="btn btn-danger btn-lg" input="submit">Delete</button>
