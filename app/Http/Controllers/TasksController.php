@@ -17,7 +17,7 @@ class TasksController extends Controller
     }
 
     public function ready() {
-        $alltasks = Task::where('completed', true)
+        $tasks = Task::where('completed', true)
             ->orderBy('id','DESC')
             ->get();
         return view('tasks.index', [
@@ -26,7 +26,7 @@ class TasksController extends Controller
     }
 
     public function todo() {
-        $alltasks = Task::where('completed', false)
+        $tasks = Task::where('completed', false)
             ->orderBy('id','DESC')
             ->get();
         return view('tasks.index', [
