@@ -60,12 +60,12 @@
 				<form action="/tasks/{{ $t->id }}" method="POST">
                     @method('DELETE')
 					@csrf
-                    <button class="btn btn-danger btn-lg trash-fill" input="submit">Delete</button>
+                    <button class="btn btn-danger btn-lg trash-fill" input="submit"></button>
                 </form>
                 <form action="/tasks/{{ $t->id }}" method="GET">
                     @method('GET')
 					@csrf
-                    <button class="btn btn-info btn-lg pencil-fill" input="submit">Modify</button>
+                    <button class="btn btn-info btn-lg pencil-fill" input="submit"></button>
                 </form>
                 <form action="/tasks/{{ $t->id }}" method="POST">
                     @method('PATCH')
