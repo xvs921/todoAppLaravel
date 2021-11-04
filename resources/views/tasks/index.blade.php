@@ -41,6 +41,10 @@
 	position: relative;
 	z-index: 2;
 }
+.testimonials .card .content .button
+{
+	display: flex;
+}
 .testimonials .card .content p
 {
 	font-size: 18px;
@@ -57,21 +61,23 @@
 		<div class="{{ $t->completedClassFind() }}">
 			<div class="content">
 				<p>{{ $t->description }}</p>
-				<form action="/tasks/{{ $t->id }}" method="POST">
-                    @method('DELETE')
-					@csrf
-                    <button class="btn btn-danger btn-lg" input="submit"><i class="fa fa-trash"></i></button>
-                </form>
-                <form action="/tasks/{{ $t->id }}" method="GET">
-                    @method('GET')
-					@csrf
-                    <button class="btn btn-info btn-lg" input="submit"><i class="fa fa-folder"></i></button>
-                </form>
-                <form action="/tasks/{{ $t->id }}" method="POST">
-                    @method('PATCH')
-					@csrf
-                    <button class="btn btn-light btn-lg" input="submit">{{ $t->isCompleted() }}</button>
-                </form>
+				<div class="buttons">
+					<form action="/tasks/{{ $t->id }}" method="POST">
+						@method('DELETE')
+						@csrf
+						<button class="btn btn-danger btn-lg" input="submit"><i class="fa fa-trash"></i></button>
+					</form>
+					<form action="/tasks/{{ $t->id }}" method="GET">
+						@method('GET')
+						@csrf
+						<button class="btn btn-info btn-lg" input="submit"><i class="fa fa-pencil"></i></button>
+					</form>
+					<form action="/tasks/{{ $t->id }}" method="POST">
+						@method('PATCH')
+						@csrf
+						<button class="btn btn-light btn-lg" input="submit">{{ $t->isCompleted() }}</button>
+					</form>
+				</div>
             </div>
 		</div>
     @endforeach
