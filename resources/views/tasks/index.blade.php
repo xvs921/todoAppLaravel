@@ -60,6 +60,7 @@
     @foreach($tasks as $t)
 		<div class="{{ $t->completedClassFind() }}">
 			<div class="content">
+				<h3>Task description</h3>
 				<p>{{ $t->description }}</p>
 				<div class="buttons">
 					<form action="/tasks/{{ $t->id }}" method="POST">

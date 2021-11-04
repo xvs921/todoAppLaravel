@@ -17,7 +17,7 @@ class Task extends Model
 
     public function isCompleted()
     {
-        return $this->completed == false ? 'fa fa-star' : 'fa fa-times';
+        return $this->completed == false ? 'fa fa-check' : 'fa fa-times';
     }
 
     public function completedClassFind()

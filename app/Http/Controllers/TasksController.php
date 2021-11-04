@@ -61,4 +61,11 @@ class TasksController extends Controller
         $task->delete();
         return redirect('/');
     }
+
+    public function openEdit($id) {
+        $task = Task::where('id', $id)->first();
+        return view('tasks.edit', [
+            'task' => $task,
+        ]);
+    }
 }
