@@ -45,7 +45,7 @@
 	background: lightgreen;
 }
 .todo{
-	background: lightred;
+	background: red;
 }
 </style>
 
