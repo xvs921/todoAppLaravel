@@ -56,20 +56,19 @@ class TasksController extends Controller
             'description' => request('description'),
         ]);
 
-        $this->index();
+        return redirect('/');
     }
 
     public function update($id) {
         $task = Task::where('id', $id)->first();
         $task->completed = $task->completed == true ? false : true;
         $task->save();
-        $this->index();
+        return redirect('/');
     }
 
     public function delete($id) {
         $task = Task::where('id', $id)->first();
-        return $task;
-        //$task->delete();
-        //$this->index();
+        $task->delete();
+        return redirect('/');
     }
 }
