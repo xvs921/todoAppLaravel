@@ -54,7 +54,12 @@
 
     <div class='testimonials'>
     @foreach($tasks as $t)
-        <div class="card {{ $t->completedClassFind() }}">
+		@if ($t->completed == true)
+			$class = 'ready'
+		@else
+			$class = 'todo'
+		@endif
+        <div class="card {{ $class }}">
 			<div class="content">
 				<p>{{ $t->description }}</p>
 				<form action="/tasks/{{ $t->id }}" method="POST">
