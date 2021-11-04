@@ -68,4 +68,11 @@ class TasksController extends Controller
             'task' => $task,
         ]);
     }
+
+    public function edit($id) {
+        $task = Task::where('id', $id)->first();
+        $task->description = request('description');
+        $task->save();
+        return redirect('/');
+    }
 }
