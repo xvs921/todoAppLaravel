@@ -11,12 +11,6 @@ class Task extends Model
 
     public $table = 'tasks';
 
-    public $id;
-
-    public $description;
-
-    public $completed;
-
     protected $fillable = [
         'description',
     ];
