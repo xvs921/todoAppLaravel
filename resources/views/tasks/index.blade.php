@@ -81,7 +81,7 @@
 			<div class="layer"></div>
 			<div class="content">
 				<p>{{ $t->description }}</p>
-				<form action="/tasks/{{ $t->id }}" method="DELETE">
+				<form action="/tasks/{{ $t->id }}" method="POST">
                     @method('DELETE')
 					@csrf
                     <button class="btn btn-danger btn-lg" input="submit">Delete</button>
