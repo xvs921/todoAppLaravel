@@ -54,8 +54,8 @@
 
     <div class='testimonials'>
     @foreach($tasks as $t)
-        <div class="card">
-			<div class="{{ $t->completedClassFind() }}">
+        <div class="card {{ $t->completedClassFind() }}">
+			<div class="content">
 				<p>{{ $t->description }}</p>
 				<form action="/tasks/{{ $t->id }}" method="POST">
                     @method('DELETE')

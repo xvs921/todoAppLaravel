@@ -22,6 +22,6 @@ class Task extends Model
 
     public function completedClassFind()
     {
-        return $this->completed == false ? 'content todo' : 'content ready';
+        return $this->completed == false ? 'todo' : 'ready';
     }
 }
