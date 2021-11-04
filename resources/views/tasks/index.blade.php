@@ -41,10 +41,10 @@
 	line-height: 24px;
 	color: #fff;
 }
-.testimonials .card .ready{
+.ready{
 	background: lightgreen;
 }
-.testimonials .card .todo{
+.todo{
 	background: red;
 }
 </style>
