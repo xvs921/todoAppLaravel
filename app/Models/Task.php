@@ -17,7 +17,7 @@ class Task extends Model
 
     public function isCompleted()
     {
-        return $this->completed == false ? 'Set Todo' : 'Set Ready';
+        return $this->completed == false ? 'Set Ready' : 'Set Todo';
     }
 
     public function completedClassFind()
