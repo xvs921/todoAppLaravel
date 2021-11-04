@@ -1,1 +1,1 @@
-web: vendor/bin/heroku-php-apache2 public/todoapp
+web: vendor/bin/heroku-php-apache2 public/
