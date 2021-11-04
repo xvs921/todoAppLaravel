@@ -58,6 +58,5 @@
         "sort-packages": true
     },
     "minimum-stability": "stable",
-    "prefer-stable": true,
-    "heroku/heroku-buildpack-php": "dev-master"
+    "prefer-stable": true
 }
