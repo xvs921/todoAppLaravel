@@ -41,6 +41,12 @@
 	line-height: 24px;
 	color: #fff;
 }
+.ready{
+	background: lightgreen;
+}
+.todo{
+	background: lightred;
+}
 </style>
 
 @section('content')
@@ -49,7 +55,7 @@
     <div class='testimonials'>
     @foreach($tasks as $t)
         <div class="card">
-			<div class="content">
+			<div class="content {{ $t->completedClassFind() }}">
 				<p>{{ $t->description }}</p>
 				<form action="/tasks/{{ $t->id }}" method="POST">
                     @method('DELETE')

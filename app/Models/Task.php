@@ -19,4 +19,9 @@ class Task extends Model
     {
         return $this->completed == false ? 'Set Todo' : 'Set Ready';
     }
+
+    public function completedClassFind()
+    {
+        return $this->completed == false ? 'todo' : 'ready';
+    }
 }
