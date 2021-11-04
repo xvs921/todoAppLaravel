@@ -77,6 +77,7 @@
 
     <div class='testimonials'>
     @foreach($tasks as $t)
+		$completed = $t->completed == true ? 'Completed' : 'Unready';
         <div class="card">
 			<div class="layer"></div>
 			<div class="content">
@@ -94,7 +95,7 @@
                 <form action="/tasks/{{ $t->id }}" method="POST">
                     @method('PATCH')
 					@csrf
-                    <button class="btn btn-light btn-lg" input="submit">Complete</button>
+                    <button class="btn btn-light btn-lg" input="submit">{{ $completed }}</button>
                 </form>
             </div>
 		</div>
