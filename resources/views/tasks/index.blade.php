@@ -7,6 +7,12 @@
 	grid-template-columns: repeat( auto-fit, minmax(350px, 1fr));
 	grid-gap: 20px;
 }
+.ready{
+	background: lightgreen;
+}
+.todo{
+	background: red;
+}
 .testimonials .card
 {
 	position: relative;
@@ -40,12 +46,6 @@
 	font-size: 18px;
 	line-height: 24px;
 	color: #fff;
-}
-.ready{
-	background: lightgreen;
-}
-.todo{
-	background: red;
 }
 </style>
 
