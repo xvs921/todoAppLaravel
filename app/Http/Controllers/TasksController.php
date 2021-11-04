@@ -60,6 +60,7 @@ class TasksController extends Controller
     }
 
     public function update($id) {
+        $id = (int)$id;
         $task = Task::where('id'->$id)->first();
         $task->completed = $task->completed == true ? false : true;
         $task->save();
@@ -67,6 +68,7 @@ class TasksController extends Controller
     }
 
     public function delete($id) {
+        $id = (int)$id;
         $task = Task::where('id'->$id)->first();
         $task->delete();
         $this->index();
