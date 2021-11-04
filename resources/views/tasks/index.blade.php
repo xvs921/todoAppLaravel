@@ -8,16 +8,17 @@
 	grid-gap: 20px;
 }
 .ready{
-	background: lightgreen;
+	--card-bg-color: lightgreen;
 }
 .todo{
-	background: red;
+	--card-bg-color: red;
 }
 .testimonials .card
 {
 	position: relative;
 	width: 350px;
 	margin: 0 auto;
+	background: var(--card-bg-color);
 	padding: 20px;
 	box-sizing: border-box;
 	text-align: center;
