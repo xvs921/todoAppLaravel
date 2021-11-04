@@ -16,6 +16,24 @@ class TasksController extends Controller
         ]);
     }
 
+    public function ready() {
+        $tasks = Task::where('id'->$id)
+            ->orderBy('id','DESC')
+            ->get();
+        return view('tasks.index', [
+            'tasks' => $tasks,
+        ]);
+    }
+
+    public function todo() {
+        $tasks = Task::where('id'->$id)
+            ->orderBy('id','DESC')
+            ->get();
+        return view('tasks.index', [
+            'tasks' => $tasks,
+        ]);
+    }
+
     public function create() {
         return view('tasks.create');
     }
