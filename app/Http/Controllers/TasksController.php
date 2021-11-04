@@ -26,7 +26,8 @@ class TasksController extends Controller
     }
 
     public function todo() {
-        $tasks = Task::where('completed'->false)
+        $value = false;
+        $tasks = Task::where('completed'->$value)
             ->get();
         return view('tasks.index', [
             'tasks' => $tasks,
