@@ -2,6 +2,7 @@
     <head>
         <title>To-do app demo</title>
         <link  rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
     </head>
     <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
