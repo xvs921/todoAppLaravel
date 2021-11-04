@@ -71,5 +71,7 @@ class TasksController extends Controller
         $id = (int)$id;
         $task = Task::where('id'->$id)->first();
         return $task;
+        //$task->delete();
+        //$this->index();
     }
 }
