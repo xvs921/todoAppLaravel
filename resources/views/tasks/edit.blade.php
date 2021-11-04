@@ -3,7 +3,7 @@
 @section('content')
 <h1>Edit Task</h1>
 
-<form method="POST" action="/tasks/update">
+<form method="POST" action="/tasks/updateAll">
     @method('PATCH') 
     @csrf
     <div class="form-group">
