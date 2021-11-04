@@ -25,17 +25,6 @@
 	box-shadow: 0 10px 40px rgba(0,0,0,.5);
 	overflow: hidden;
 }
-.testimonials .card .layer
-{
-	/*position: absolute;
-	top: calc(100% - 2px);
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: linear-gradient(#03a9f4, #e91ee3);
-	z-index: 1;
-	transition: 0.5s;*/
-}
 .testimonials .card .content
 {
 	position: relative;
@@ -83,5 +72,4 @@
 		</div>
     @endforeach
     </div>
-    <a href='tasks/create' class='btn btn-primary btn-lg btn-block'>new</a>
 @endsection
