@@ -12,7 +12,7 @@
 	position: relative;
 	width: 350px;
 	margin: 0 auto;
-	background: lightgreen;
+	background: red;
 	padding: 20px;
 	box-sizing: border-box;
 	text-align: center;
@@ -41,10 +41,10 @@
 	line-height: 24px;
 	color: #fff;
 }
-.ready{
+.testimonials .card .ready{
 	background: lightgreen;
 }
-.todo{
+.testimonials .card .todo{
 	background: red;
 }
 </style>
