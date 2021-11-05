@@ -1,6 +1,6 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+import $  from 'jquery';
 
-jQuery(document).ready(function($){
+$(document).ready(function($){
     $("#btn-completed").click(function (e) {
         $.ajaxSetup({
             headers: {
