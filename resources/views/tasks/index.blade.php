@@ -74,14 +74,14 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 jQuery(document).on("click", ".myBtn" , function() {
-  var todo_id = $(this).data('id');
+  var todo_id = jQuery(this).data('id');
 
   var title = 'NEWTITLE pls';
 
 
   if(title != ''){
     jQuery.ajax({
-      url: 'tasks/'+data.id,
+      url: 'tasks/'+todo_id,
       type: 'post',
       data: {_token: CSRF_TOKEN,id: todo_id,title: title},
       success: function(response){
