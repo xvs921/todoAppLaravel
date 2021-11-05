@@ -88,7 +88,7 @@ jQuery(document).on("click", ".myBtn" , function() {
     jQuery.ajax({
       url: 'tasks/'+todo_id,
       type: 'PATCH',
-      data: {_token: CSRF_TOKEN,id: todo_id,title: title},
+      data: {id: todo_id,title: title},
       success: function(response){
         alert(response);
       }
