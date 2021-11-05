@@ -61,7 +61,7 @@
 						<button class="btn btn-info btn-lg" input="submit"><i class="fa fa-pencil"></i></button>
 					</form>
 					<div>
-					<button type="button" id="btn-completed" class="btn btn-light btn-lg"><i class="{{ $t->isCompleted() }}"></i></button>
+					<button type="button" class="btn btn-light btn-lg btn-completed"><i class="{{ $t->isCompleted() }}"></i></button>
 					<input type="hidden" id="todo_id" name="todo_id" value="0">
 					</div>
 				</div>
@@ -74,7 +74,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 jQuery(document).ready(function($){
-    $("#btn-completed").click(function (e) {
+    $(".btn-completed").click(function (e) {
         $.ajaxSetup({
             headers: {
                 'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
