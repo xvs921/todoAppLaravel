@@ -60,41 +60,14 @@
 						@csrf
 						<button class="btn btn-info btn-lg" input="submit"><i class="fa fa-pencil"></i></button>
 					</form>
-					<div>
-					<button type="button" class="btn btn-light btn-lg myBtn"><i class="{{ $t->isCompleted() }}"></i></button>
-					<input type="hidden" id="todo_id" name="todo_id" value="{{ $t->id }}">
-					</div>
+					<form action="/tasks/{{ $t->id }}" method="POST">
+						@method('PATCH')
+						@csrf
+						<button class="btn btn-light btn-lg" input="submit"><i class="{{ $t->isCompleted() }}"></i></button>
+					</form>
 				</div>
             </div>
 		</div>
     @endforeach
     </div>
 @endsection
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-jQuery(document).on("click", ".myBtn" , function() {
-	var todo_id = jQuery('#todo_id').val();
-
-  var title = 'NEWTITLE pls';
-
-  $.ajaxSetup({
-		headers: {
-			'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
-		}
-	});
-
-  if(title != ''){
-    jQuery.ajax({
-      url: 'tasks/'+todo_id,
-      type: 'PATCH',
-      data: {id: todo_id,title: title},
-      success: function(response){
-        alert(response);
-      }
-    });
-  }else{
-    alert('Fill all fields');
-  }
-});
-</script>

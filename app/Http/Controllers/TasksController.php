@@ -8,7 +8,8 @@ use App\Models\Task;
 class TasksController extends Controller
 {
     public function index() {
-        $tasks = Task::orderBy('id','DESC')
+        $tasks = Task::orderBy('completed','DESC')
+            ->orderBy('id','DESC')
             ->get();
         return view('tasks.index', [
             'tasks' => $tasks,
