@@ -61,7 +61,7 @@
 						<button class="btn btn-info btn-lg" input="submit"><i class="fa fa-pencil"></i></button>
 					</form>
 					<div>
-					<button type="button" class="btn btn-light btn-lg" onclick="CompletedChange()"><i class="{{ $t->isCompleted() }}"></i></button>
+					<button type="button" class="btn btn-light btn-lg myBtn"><i class="{{ $t->isCompleted() }}"></i></button>
 					<input type="hidden" id="todo_id" name="todo_id" value="0">
 					</div>
 				</div>
@@ -73,8 +73,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
-	CompletedChange()
-	{
+	document.getElementByClassName("myBtn").addEventListener("click", function() {
 		jQuery.ajaxSetup({
             headers: {
                 'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
@@ -100,36 +99,5 @@
                 console.log(data);
             }
         });
-	}
-
-jQuery(document).ready(function($){
-    $(".btn-completed").click(function (e) {
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
-            }
-        });
-        e.preventDefault();
-        var formData = {
-            title: "NOTITLE PLS",
-        };
-        var state = jQuery('#btn-completed').val();
-        var type = "PATCH";
-        var todo_id = jQuery('#todo_id').val();
-        var ajaxurl = 'todo/'+todo_id;
-        $.ajax({
-            type: type,
-            url: ajaxurl,
-            data: formData,
-            dataType: 'json',
-            success: function (data) {
-                var todo = '<h1>'+data.title+'</h1>';
-                jQuery("#todo" + todo_id).replaceWith(todo);
-            },
-            error: function (data) {
-                console.log(data);
-            }
-        });
-    });
-});
+	});
 </script>
