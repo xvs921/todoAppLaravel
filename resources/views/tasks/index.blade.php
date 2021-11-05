@@ -73,31 +73,23 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
-	document.getElementsByClassName("myBtn").addEventListener("click", function() {
-		jQuery.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
-            }
-        });
-        var formData = {
-            title: "NOTITLE PLS",
-        };
-        var state = jQuery('#btn-completed').val();
-        var type = "PATCH";
-        var todo_id = jQuery('#todo_id').val();
-        var ajaxurl = 'todo/'+todo_id;
-        jQuery.ajax({
-            type: type,
-            url: ajaxurl,
-            data: formData,
-            dataType: 'json',
-            success: function (data) {
-                var todo = '<h1>'+data.title+'</h1>';
-                jQuery("#todo" + todo_id).replaceWith(todo);
-            },
-            error: function (data) {
-                console.log(data);
-            }
-        });
-	});
+jQuery(document).on("click", ".myBtn" , function() {
+  var todo_id = $(this).data('id');
+
+  var title = 'NEWTITLE pls';
+
+
+  if(title != ''){
+    jQuery.ajax({
+      url: 'tasks/'+data.id,
+      type: 'post',
+      data: {_token: CSRF_TOKEN,id: todo_id,title: title},
+      success: function(response){
+        alert(response);
+      }
+    });
+  }else{
+    alert('Fill all fields');
+  }
+});
 </script>
