@@ -46,8 +46,8 @@
     <div class='testimonials'>
     @foreach($tasks as $t)
 		<div class="{{ $t->completedClassFind() }}">
-			<div class="content">
-				<h3>Task description</h3>
+			<div class="content" id="todo{{$t->id}}">
+				<h3>{{ $t->title }}</h3>
 				<p>{{ $t->description }}</p>
 				<div class="buttons">
 					<form action="/tasks/{{ $t->id }}" method="POST">
@@ -63,7 +63,8 @@
 					<form action="/tasks/{{ $t->id }}" method="POST">
 						@method('PATCH')
 						@csrf
-						<button class="btn btn-light btn-lg" input="submit"><i class="{{ $t->isCompleted() }}"></i></button>
+						<button id="btn-completed" class="btn btn-light btn-lg" input="submit"><i class="{{ $t->isCompleted() }}"></i></button>
+						<input type="hidden" id="todo_id" name="todo_id" value="0">
 					</form>
 				</div>
             </div>
