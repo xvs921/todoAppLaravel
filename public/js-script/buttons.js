@@ -1,3 +1,5 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 jQuery(document).ready(function($){
     $("#btn-completed").click(function (e) {
         $.ajaxSetup({
@@ -10,9 +12,9 @@ jQuery(document).ready(function($){
             title: "NOTITLE PLS",
         };
         var state = jQuery('#btn-completed').val();
-        var type = "POST";
+        var type = "PATCH";
         var todo_id = jQuery('#todo_id').val();
-        var ajaxurl = 'todo';
+        var ajaxurl = 'todo/'+todo_id;
         $.ajax({
             type: type,
             url: ajaxurl,
@@ -21,8 +23,6 @@ jQuery(document).ready(function($){
             success: function (data) {
                 var todo = '<h1>'+data.title+'</h1>';
                 jQuery("#todo" + todo_id).replaceWith(todo);
-                jQuery('#myForm').trigger("reset");
-                jQuery('#formModal').modal('hide')
             },
             error: function (data) {
                 console.log(data);
