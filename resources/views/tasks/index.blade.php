@@ -62,7 +62,7 @@
 					</form>
 					<div>
 					<button type="button" class="btn btn-light btn-lg myBtn"><i class="{{ $t->isCompleted() }}"></i></button>
-					<input type="hidden" id="todo_id" name="todo_id" value="0">
+					<input type="hidden" id="todo_id" name="todo_id" value="{{ $t->id }}">
 					</div>
 				</div>
             </div>
@@ -78,11 +78,16 @@ jQuery(document).on("click", ".myBtn" , function() {
 
   var title = 'NEWTITLE pls';
 
+  $.ajaxSetup({
+		headers: {
+			'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
+		}
+	});
 
   if(title != ''){
     jQuery.ajax({
       url: 'tasks/'+todo_id,
-      type: 'post',
+      type: 'PATCH',
       data: {_token: CSRF_TOKEN,id: todo_id,title: title},
       success: function(response){
         alert(response);
