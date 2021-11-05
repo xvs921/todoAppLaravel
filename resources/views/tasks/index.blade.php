@@ -73,7 +73,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
-	document.getElementByClassName("myBtn").addEventListener("click", function() {
+	document.getElementsByClassName("myBtn").addEventListener("click", function() {
 		jQuery.ajaxSetup({
             headers: {
                 'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
