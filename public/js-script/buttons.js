@@ -1,6 +1,6 @@
-import $  from 'jquery';
+<script type="text/javascript" src="./jquery-min.js"></script>
 
-$(document).ready(function($){
+jQuery(document).ready(function($){
     $("#btn-completed").click(function (e) {
         $.ajaxSetup({
             headers: {
