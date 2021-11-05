@@ -41,8 +41,8 @@
 	color: #fff;
 }
 </style>
-<h1>{{ $title }}</h1>
 @section('content')
+	<h1>{{ $title }}</h1>
     <div class='testimonials'>
     @foreach($tasks as $t)
 		<div class="{{ $t->completedClassFind() }}">
