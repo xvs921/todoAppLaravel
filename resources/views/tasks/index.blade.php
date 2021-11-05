@@ -41,7 +41,7 @@
 	color: #fff;
 }
 </style>
-
+<h1>{{ title }}</h1>
 @section('content')
     <div class='testimonials'>
     @foreach($tasks as $t)

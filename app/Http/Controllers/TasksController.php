@@ -12,6 +12,7 @@ class TasksController extends Controller
             ->get();
         return view('tasks.index', [
             'tasks' => $tasks,
+            'title' => 'All tasks',
         ]);
     }
 
@@ -21,6 +22,7 @@ class TasksController extends Controller
             ->get();
         return view('tasks.index', [
             'tasks' => $tasks,
+            'title' => 'Ready tasks',
         ]);
     }
 
@@ -30,6 +32,7 @@ class TasksController extends Controller
             ->get();
         return view('tasks.index', [
             'tasks' => $tasks,
+            'title' => 'Todo tasks',
         ]);
     }
 
