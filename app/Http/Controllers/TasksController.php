@@ -76,6 +76,7 @@ class TasksController extends Controller
     public function edit($id) {
         $task = Task::where('id', $id)->first();
         $task->description = request('description');
+        $task->title = request('title');
         $task->save();
         return redirect('/');
     }
