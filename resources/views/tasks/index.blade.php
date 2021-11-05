@@ -63,7 +63,7 @@
 					<form action="/tasks/{{ $t->id }}" method="POST">
 						@method('PATCH')
 						@csrf
-						<button id="btn-completed" class="btn btn-light btn-lg" input="submit"><i class="{{ $t->isCompleted() }}"></i></button>
+						<button id="btn-completed" class="btn btn-light btn-lg"><i class="{{ $t->isCompleted() }}"></i></button>
 						<input type="hidden" id="todo_id" name="todo_id" value="0">
 					</form>
 				</div>
