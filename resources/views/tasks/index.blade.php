@@ -40,7 +40,7 @@
 }
 @media only screen and (max-width: 600px) {
   body {
-    background-color: lightblue;
+    background: lightblue;
   }
 }
 </style>
