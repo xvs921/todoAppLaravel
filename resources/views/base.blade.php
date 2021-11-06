@@ -20,6 +20,9 @@
           .nav-link{
             font-size: 30px !important;
           }
+          .container{
+            width: 100%;
+          }
         </style>
     </head>
     <body>
