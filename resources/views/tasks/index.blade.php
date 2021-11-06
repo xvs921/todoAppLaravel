@@ -4,9 +4,6 @@
 {
 	width: 1000%;
 	margin: 60px auto;
-	display: grid;
-	grid-template-columns: repeat( auto-fit, minmax(350px, 1fr));
-	grid-gap: 20px;
 }
 .ready{
 	--card-bg-color: green;
@@ -17,7 +14,7 @@
 .testimonials .card
 {
 	position: relative;
-	width: 350px;
+	width: 80%;
 	margin: 0 auto;
 	background: var(--card-bg-color);
 	padding: 20px;
