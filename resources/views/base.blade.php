@@ -6,6 +6,9 @@
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="resources/css/jquery.min.js"></script>
+		    <link href="resources/css/bootstrap.mini.css" rel="stylesheet" type="text/css" />
+		    <script src="resources/css/bootstrap.min.js"></script>
         <style>
           body{ 
             background: lightyellow;
