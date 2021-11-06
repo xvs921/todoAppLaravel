@@ -87,7 +87,12 @@ class TasksController extends Controller
 
     public function delete($id) {
         $task = Task::where('id', $id)->first();
-        $task->delete();
+        try {
+            $task->delete();
+            $message = "Task deleted(".$task->title.")";
+        } catch(Exception $e) {
+            $message = "Error with delete task(".$task->title.")";
+        }
         return redirect()->back()->with('message', $message);
     }
 
