@@ -64,7 +64,6 @@ class TasksController extends Controller
         } catch(Exception $e) {
             $message = "Error with set complete(".$task->title.")";
         }
-        ?><script>alert(<?php echo $message; ?>)</script><?php
         return redirect()->back()->with('success', 'success *');
     }
 

@@ -80,3 +80,7 @@
     @endforeach
     </div>
 @endsection
+
+@if (isset($message))
+	<script>alert(<?php echo $message; ?>)</script>
+@endif
