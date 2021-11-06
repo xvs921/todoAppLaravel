@@ -48,9 +48,7 @@
 }
 .testimonials .card .content span
 {
-	font-size: 22px;
 	color: #fff;
-	margin-bottom: 10px;
 }
 </style>
 @section('content')
