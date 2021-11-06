@@ -41,7 +41,6 @@
 </style>
 @section('content')
 	<h1>{{ $title }}</h1>
-    <div class='testimonials'>
     @foreach($tasks as $t)
 	<div class="row">
 		<div class="{{ $t->completedClassFind() }}">
@@ -66,7 +65,6 @@
 					</form>
 				</div>
             </div>
-		</div>
 		</div>
     @endforeach
     </div>
