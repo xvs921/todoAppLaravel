@@ -125,6 +125,7 @@ jQuery(document).ready(function($){
             jQuery('#description').val(data.description);
             jQuery('#btn-save').val("update");
             jQuery('#linkEditorModal').modal('show');
+			let a = this.$.linkEditorModal;
         })
     });
 
