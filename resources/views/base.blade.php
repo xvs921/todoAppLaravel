@@ -12,6 +12,7 @@
             background: lightyellow;
           }
           .navbar-mystyle{ 
+            height: 20% !important;
             background: yellow !important;
           }
         </style>
