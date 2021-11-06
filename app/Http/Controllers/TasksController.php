@@ -113,6 +113,6 @@ class TasksController extends Controller
         } catch(Exception $e) {
             $message = "Error with edit task(".$task->title.")";
         }
-        return redirect()->back()->with('message', $message);
+        return redirect('/')->back()->with('message', $message);
     }
 }
