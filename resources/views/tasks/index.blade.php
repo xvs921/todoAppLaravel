@@ -86,27 +86,27 @@
 							<div class="row">
 								<div class="col-md-6">
 									<center><p class="modalSzoveg">Név</p></center>
-									<input class="form-control" type="text" name="input_nev" placeholder="név" value="<?php echo $_SESSION["felv_nev"]; ?>">
+									<input class="form-control" type="text" name="input_nev" placeholder="név" value="">
 								</div>
 								<div class="col-md-6">
 									<center><p class="modalSzoveg">Összpontszám</p></center>
-									<input class="form-control" type="text" name="input_osszPontszam" placeholder="1 - 99" value="<?php echo $_SESSION["felv_osszPontszam"]; ?>">
+									<input class="form-control" type="text" name="input_osszPontszam" placeholder="1 - 99" value="">
 								</div>
 								<div class="col-md-6">
 									<center><p class="modalSzoveg">Hárompontos</p></center>
-									<input class="form-control" type="text" name="input_3pontos" placeholder="1 - 99" value="<?php echo $_SESSION["felv_3pontos"]; ?>">
+									<input class="form-control" type="text" name="input_3pontos" placeholder="1 - 99" value="">
 								</div>
 								<div class="col-md-6">
 									<center><p class="modalSzoveg">Zsákolás</p></center>
-									<input class="form-control" type="text" name="input_zsakolas" placeholder="1 - 99" value="<?php echo $_SESSION["felv_zsakolas"]; ?>">
+									<input class="form-control" type="text" name="input_zsakolas" placeholder="1 - 99" value="">
 								</div>
 								<div class="col-md-6">
 									<center><p class="modalSzoveg">Ár</p></center>
-									<input class="form-control" type="text" name="input_ar" placeholder="1 - 250 000" value="<?php echo $_SESSION["felv_ar"]; ?>">
+									<input class="form-control" type="text" name="input_ar" placeholder="1 - 250 000" value="">
 								</div>
 								<div class="col-md-6">
 									<center><p class="modalSzoveg">Kép</p></center>
-									<input class="form-control" type="text" name="input_kep" placeholder="*.png vagy *.jpg" value="<?php echo $_SESSION["felv_kep"]; ?>">
+									<input class="form-control" type="text" name="input_kep" placeholder="*.png vagy *.jpg" value="">
 								</div>
 							</div>
 							<center><p class="modalSzoveg">Minden adat kitöltése kötelező!</p></center>
