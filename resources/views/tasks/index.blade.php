@@ -2,7 +2,7 @@
 <style>
 .testimonials
 {
-	width: 90%;
+	width: 1000%;
 	margin: 60px auto;
 	display: grid;
 	grid-template-columns: repeat( auto-fit, minmax(350px, 1fr));
