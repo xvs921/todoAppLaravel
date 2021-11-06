@@ -113,10 +113,10 @@
             </div>
 @endsection
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 jQuery(document).ready(function($){
 
-    ////----- Open the modal to UPDATE a link -----////
     jQuery('body').on('click', '.open-modal', function () {
         var link_id = $(this).val();
         $.get('tasks/' + link_id, function (data) {
