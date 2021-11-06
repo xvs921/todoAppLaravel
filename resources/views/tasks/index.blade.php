@@ -83,4 +83,6 @@
 
 @if (isset($message))
 	<script>alert(<?php echo "'".$message."'"; ?>)</script>
+@elseif (\Session::has('message'))
+	<script>alert(<?php echo "'".\Session::get('message')."'"; ?>)</script>
 @endif

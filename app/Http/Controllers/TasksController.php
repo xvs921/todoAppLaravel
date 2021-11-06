@@ -93,8 +93,7 @@ class TasksController extends Controller
         } catch(Exception $e) {
             $message = "Error with delete task(".$task->title.")";
         }
-        ?><script>alert(<?php echo "'".$message."'"; ?>)</script><?php
-        return redirect()->back();
+        return redirect()->back()->with('message', $message); 
     }
 
     public function openEdit($id) {
