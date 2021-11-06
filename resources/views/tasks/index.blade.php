@@ -123,9 +123,9 @@ jQuery(document).ready(function($){
             jQuery('#link_id').val(data.id);
             jQuery('#link').val(data.url);
             jQuery('#description').val(data.description);
+			let a = this.$.linkEditorModal;
             jQuery('#btn-save').val("update");
             jQuery('#linkEditorModal').modal('show');
-			let a = this.$.linkEditorModal;
         })
     });
 
