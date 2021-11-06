@@ -5,7 +5,7 @@
 	width: 100%;
 	margin: 60px auto;
 	display: grid;
-	grid-template-columns: repeat( auto-fit, minmax(600px, 1fr));
+	grid-template-columns: repeat( auto-fit, minmax(550px, 1fr));
 	grid-gap: 5px;
 }
 .ready{
@@ -17,7 +17,7 @@
 .testimonials .card
 {
 	position: relative;
-	width: 600px;
+	width: 550px;
 	margin: 0 auto;
 	background: var(--card-bg-color);
 	padding: 20px;
