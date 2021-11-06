@@ -13,6 +13,7 @@ class Task extends Model
 
     protected $fillable = [
         'description',
+        'title',
     ];
 
     public function isCompleted()
