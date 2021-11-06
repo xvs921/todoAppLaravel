@@ -58,8 +58,14 @@ class TasksController extends Controller
     public function update($id) {
         $task = Task::where('id', $id)->first();
         $task->completed = $task->completed == true ? false : true;
-        $task->save();
-        return redirect()->back()->with('success', 'success update');
+        try {
+            $task->save();
+            $message = "Task set completed(".$task->title.")";
+        } catch(Exception $e) {
+            $message = "Error with set complete(".$task->title.")";
+        }
+        ?><script>alert(<?php echo $message; ?>)</script><?php
+        return redirect()->back()->with('success', 'success *');
     }
 
     public function delete($id) {

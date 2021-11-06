@@ -61,12 +61,15 @@
 						@csrf
 						<button class="btn btn-danger btn-lg" input="submit"><i class="fa fa-trash"></i></button>
 					</form>
-						<button class="btn btn-info btn-lg" input="submit" value="{{ $t->id }}" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-pencil"></i></button>
-
 					<form action="/tasks/{{ $t->id }}" method="POST">
 						@method('PATCH')
 						@csrf
 						<button class="btn btn-light btn-lg" input="submit"><i class="{{ $t->isCompleted() }}"></i></button>
+					</form>
+					<form action="/tasks/{{ $t->id }}" method="GET">
+						@method('GET')
+						@csrf
+						<button class="btn btn-info btn-lg" input="submit"><i class="fa fa-pencil"></i></button>
 					</form>
 				</div>
 				<h3>{{ $t->title }}</h3>
