@@ -38,6 +38,11 @@
 	line-height: 24px;
 	color: #fff;
 }
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
 </style>
 @section('content')
 	<h1>{{ $title }}</h1>
