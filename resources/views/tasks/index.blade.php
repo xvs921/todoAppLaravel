@@ -51,8 +51,8 @@
 </style>
 @section('content')
 	<h1>{{ $title }}</h1>
-    <div class='testimonials'>
-    @foreach($tasks as $t)
+	<div class='testimonials'>
+	@foreach($tasks as $t)
 		<div class="{{ $t->completedClassFind() }}">
 			<div class="content" id="todo{{ $t->id }}">
 				<div class="buttons">
@@ -75,10 +75,10 @@
 				<h3>{{ $t->title }}</h3>
 				<p>{{ $t->description }}</p>
 				<span>Last modify date: {{ $t->updated_at }}</span>
-            </div>
+			</div>
 		</div>
-    @endforeach
-    </div>
+	@endforeach
+	</div>
 @endsection
 
 @if (isset($message))
