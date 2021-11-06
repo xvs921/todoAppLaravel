@@ -6,7 +6,7 @@
 	margin: 60px auto;
 	display: grid;
 	grid-template-columns: repeat( auto-fit, minmax(600px, 1fr));
-	grid-gap: 20px;
+	grid-gap: 5px;
 }
 .ready{
 	--card-bg-color: green;
@@ -53,7 +53,7 @@
 			<div class="content" id="todo{{ $t->id }}">
 				<h3>{{ $t->title }}</h3>
 				<p>{{ $t->description }}</p>
-				<p>Last modify date: {{ $t->updated_at }}</p>
+				<span>Last modify date: {{ $t->updated_at }}</span>
 				<div class="buttons">
 					<form action="/tasks/{{ $t->id }}" method="POST">
 						@method('DELETE')
