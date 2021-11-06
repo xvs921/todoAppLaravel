@@ -2,8 +2,11 @@
 <style>
 .testimonials
 {
-	width: 1000%;
+	width: 90%;
 	margin: 60px auto;
+	display: grid;
+	grid-template-columns: repeat( auto-fit, minmax(350px, 1fr));
+	grid-gap: 20px;
 }
 .ready{
 	--card-bg-color: green;
@@ -14,7 +17,7 @@
 .testimonials .card
 {
 	position: relative;
-	width: 80%;
+	width: 350px;
 	margin: 0 auto;
 	background: var(--card-bg-color);
 	padding: 20px;
@@ -38,8 +41,8 @@
 </style>
 @section('content')
 	<h1>{{ $title }}</h1>
+    <div class='testimonials'>
     @foreach($tasks as $t)
-	<div class="row">
 		<div class="{{ $t->completedClassFind() }}">
 			<div class="content" id="todo{{ $t->id }}">
 				<h3>{{ $t->title }}</h3>
