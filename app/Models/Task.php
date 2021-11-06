@@ -22,6 +22,6 @@ class Task extends Model
 
     public function completedClassFind()
     {
-        return $this->completed == false ? 'card todo' : 'card ready';
+        return $this->completed == false ? 'card todo col-lg-6 col-md-12' : 'card ready col-lg-6 col-md-12';
     }
 }
