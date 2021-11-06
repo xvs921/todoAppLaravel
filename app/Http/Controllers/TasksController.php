@@ -53,6 +53,10 @@ class TasksController extends Controller
                 'description' => request('description'),
             ]);
 
+            $task = Task::where('title', request('title'))
+                ->where('description', request('description'))
+                ->first();
+
             $message = "Task created(".$task->title.")";
         } catch(Exception $e) {
             $message = "Error with task creation(".$task->title.")";
