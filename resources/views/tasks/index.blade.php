@@ -42,6 +42,7 @@
 	<h1>{{ $title }}</h1>
     <div class='testimonials'>
     @foreach($tasks as $t)
+	<div class="row">
 		<div class="{{ $t->completedClassFind() }}">
 			<div class="content" id="todo{{ $t->id }}">
 				<h3>{{ $t->title }}</h3>
@@ -64,6 +65,7 @@
 					</form>
 				</div>
             </div>
+		</div>
 		</div>
     @endforeach
     </div>
