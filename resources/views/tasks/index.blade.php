@@ -32,10 +32,16 @@
 	display: flex;
 	justify-content: space-between;
 }
+.testimonials .card .content h3
+{
+	font-size: 44px;
+	line-height: 44px;
+	color: #fff;
+}
 .testimonials .card .content p
 {
-	font-size: 24px;
-	line-height: 24px;
+	font-size: 32px;
+	line-height: 32px;
 	color: #fff;
 }
 </style>
