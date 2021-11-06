@@ -59,7 +59,7 @@ class TasksController extends Controller
 
             $message = "Task created(".$task->title.")";
         } catch(Exception $e) {
-            $message = "Error with task creation(".$task->title.")";
+            $message = "Error with create task(".$task->title.")";
         }
 
         $tasks = Task::orderBy('completed','DESC')
@@ -68,7 +68,7 @@ class TasksController extends Controller
 
         return view('tasks.index', [
             'tasks' => $tasks,
-            'title' => 'Todo tasks',
+            'title' => 'All tasks',
             'message' => $message,
         ]);
     }
@@ -82,7 +82,7 @@ class TasksController extends Controller
         } catch(Exception $e) {
             $message = "Error with set complete(".$task->title.")";
         }
-        return redirect()->back()->with('success', 'success *');
+        return redirect()->back()->with('message', $message);
     }
 
     public function delete($id) {
@@ -93,7 +93,7 @@ class TasksController extends Controller
         } catch(Exception $e) {
             $message = "Error with delete task(".$task->title.")";
         }
-        return redirect()->back()->with('message', $message); 
+        return redirect()->back()->with('message', $message);
     }
 
     public function openEdit($id) {
@@ -105,9 +105,14 @@ class TasksController extends Controller
 
     public function edit($id) {
         $task = Task::where('id', $id)->first();
-        $task->description = request('description');
-        $task->title = request('title');
-        $task->save();
-        return redirect('/');
+        try {
+            $task->description = request('description');
+            $task->title = request('title');
+            $task->save();
+            $message = "Task edited(".$task->title.")";
+        } catch(Exception $e) {
+            $message = "Error with edit task(".$task->title.")";
+        }
+        return redirect()->back()->with('message', $message);
     }
 }
