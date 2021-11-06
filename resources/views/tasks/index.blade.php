@@ -2,7 +2,8 @@
 <style>
 .testimonials
 {
-	margin: 50px auto 100px;
+	width: 80%;
+	margin: 60px auto;
 	display: grid;
 	grid-template-columns: repeat( auto-fit, minmax(350px, 1fr));
 	grid-gap: 20px;
@@ -24,6 +25,7 @@
 	text-align: center;
 	box-shadow: 0 10px 40px rgba(0,0,0,.5);
 	overflow: hidden;
+	border-radius: 20px;
 }
 .testimonials .card .content
 {
