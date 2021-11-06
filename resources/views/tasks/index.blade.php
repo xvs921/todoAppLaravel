@@ -17,7 +17,8 @@
 .testimonials .card
 {
 	position: relative;
-	width: 30%;
+	width: 270px;
+	height: 270px;
 	margin: 0 auto;
 	background: var(--card-bg-color);
 	padding: 20px;
