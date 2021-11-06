@@ -44,7 +44,7 @@ class TasksController extends Controller
     public function store() {
         try {
             request()->validate([
-                'title' => 'required|max:50',
+                'title' => 'required|max:40',
                 'description' => 'required|max:255',
             ]);
 
@@ -52,7 +52,7 @@ class TasksController extends Controller
                 'title' => request('title'),
                 'description' => request('description'),
             ]);
-            
+
             $message = "Task created(".$task->title.")";
         } catch(Exception $e) {
             $message = "Error with task creation(".$task->title.")";
