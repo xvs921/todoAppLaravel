@@ -34,7 +34,7 @@
 }
 .testimonials .card .content p
 {
-	font-size: 242px;
+	font-size: 24px;
 	line-height: 24px;
 	color: #fff;
 }
