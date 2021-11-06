@@ -2,7 +2,7 @@
 <style>
 .testimonials
 {
-	width: 90%;
+	width: 100%;
 	margin: 60px auto;
 	display: grid;
 	grid-template-columns: repeat( auto-fit, minmax(450px, 1fr));
@@ -17,7 +17,7 @@
 .testimonials .card
 {
 	position: relative;
-	width: 450px;
+	width: 600px;
 	margin: 0 auto;
 	background: var(--card-bg-color);
 	padding: 20px;
