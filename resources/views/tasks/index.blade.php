@@ -5,7 +5,7 @@
 	width: 90%;
 	margin: 60px auto;
 	display: grid;
-	grid-template-columns: minmax(80%) 1fr;
+	grid-template-columns: repeat( auto-fit, minmax(400px, 1fr));
 	grid-gap: 20px;
 }
 .ready{
