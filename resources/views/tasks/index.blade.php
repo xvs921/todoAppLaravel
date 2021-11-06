@@ -27,12 +27,7 @@
 	overflow: hidden;
 	border-radius: 20px;
 }
-.testimonials .card .content
-{
-	position: relative;
-	z-index: 2;
-}
-.testimonials .card .content .buttons
+.testimonials .card .content .button
 {
 	display: flex;
 }
