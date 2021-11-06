@@ -47,12 +47,25 @@ class TasksController extends Controller
             'description' => 'required|max:255',
         ]);
         
-        Task::create([
-            'title' => request('title'),
-            'description' => request('description'),
-        ]);
+        try {
+            Task::create([
+                'title' => request('title'),
+                'description' => request('description'),
+            ]);
+            $message = "Task created(".$task->title.")";
+        } catch(Exception $e) {
+            $message = "Error with task creation(".$task->title.")";
+        }
 
-        return redirect('/');
+        $tasks = Task::orderBy('completed','DESC')
+            ->orderBy('id','DESC')
+            ->get();
+
+        return view('tasks.index', [
+            'tasks' => $tasks,
+            'title' => 'Todo tasks',
+            'message' => $message,
+        ]);
     }
 
     public function update($id) {
