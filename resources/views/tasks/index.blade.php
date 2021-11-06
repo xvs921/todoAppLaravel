@@ -44,6 +44,10 @@
 	line-height: 32px;
 	color: #fff;
 }
+.testimonials .card .content span
+{
+	color: #fff;
+}
 </style>
 @section('content')
 	<h1>{{ $title }}</h1>

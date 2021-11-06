@@ -1,4 +1,10 @@
 @extends('base')
+<style>
+.header
+{
+  font-size: 32px;
+}
+</style>
 
 @section('content')
 <h1>Edit Task</h1>
@@ -7,9 +13,9 @@
     @method('PATCH') 
     @csrf
     <div class="form-group">
-      <label for="title">Task title</label>
+      <label class="header" for="title">Task title</label>
       <input class="form-control" name="title" value="{{ $task->title }}"/>
-      <label for="description">Task Description</label>
+      <label class="header" for="description">Task Description</label>
       <input class="form-control" name="description" value="{{ $task->description }}"/>
       <label>Last update: {{ $task->updated_at}}</label>
     </div>
