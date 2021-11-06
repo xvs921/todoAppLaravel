@@ -5,7 +5,7 @@
 	width: 90%;
 	margin: 60px auto;
 	display: grid;
-	grid-template-columns: repeat( auto-fit, minmax(350px, 1fr));
+	grid-template-columns: repeat( auto-fit, minmax(450px, 1fr));
 	grid-gap: 20px;
 }
 .ready{
@@ -17,7 +17,7 @@
 .testimonials .card
 {
 	position: relative;
-	width: 350px;
+	width: 450px;
 	margin: 0 auto;
 	background: var(--card-bg-color);
 	padding: 20px;
@@ -37,11 +37,6 @@
 	font-size: 24px;
 	line-height: 24px;
 	color: #fff;
-}
-@media only screen and (max-width: 600px) {
-  body {
-    background: lightblue;
-  }
 }
 </style>
 @section('content')
