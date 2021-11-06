@@ -27,9 +27,10 @@
 	overflow: hidden;
 	border-radius: 20px;
 }
-.testimonials .card .content .button
+.testimonials .card .content .buttons
 {
 	display: flex;
+	justify-content: space-between;
 }
 .testimonials .card .content p
 {
