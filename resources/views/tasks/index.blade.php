@@ -124,7 +124,7 @@ jQuery(document).ready(function($){
             jQuery('#link').val(data.url);
             jQuery('#description').val(data.description);
             jQuery('#btn-save').val("update");
-            jQuery('.linkEditorModal').modal('show');
+            jQuery('#linkEditorModal').modal('show');
         })
     });
 
