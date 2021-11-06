@@ -11,10 +11,14 @@
           body{ 
             background: lightyellow;
           }
-          .navbar-mystyle{ 
-            font-size: 44px;
-            height: 12% !important;
+          .navbar-mystyle{
             background: yellow !important;
+          }
+          .navbar-brand{
+            font-size: 44px !important;
+          }
+          .nav-link{
+            font-size: 30px !important;
           }
         </style>
     </head>
