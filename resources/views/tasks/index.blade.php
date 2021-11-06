@@ -31,6 +31,7 @@
 {
 	display: flex;
 	justify-content: space-between;
+	margin-top: 10px;
 	position: absolute; 
 	bottom: 0; 
 }
