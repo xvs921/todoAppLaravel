@@ -61,7 +61,7 @@
 						@csrf
 						<button class="btn btn-danger btn-lg" input="submit"><i class="fa fa-trash"></i></button>
 					</form>
-						<button class="btn btn-info btn-lg" input="submit" value="{{ $t->id }}"><i class="fa fa-pencil"></i></button>
+						<button class="btn btn-info btn-lg open-modal" input="submit" value="{{ $t->id }}"><i class="fa fa-pencil"></i></button>
 
 					<form action="/tasks/{{ $t->id }}" method="POST">
 						@method('PATCH')
@@ -170,4 +170,5 @@ jQuery(document).ready(function($){
             }
         });
     });
+}
 </script>
