@@ -11,7 +11,7 @@
             background: lightyellow;
           }
           .navbar-mystyle{ 
-            background: yellow;
+            background: yellow !important;
           }
         </style>
     </head>

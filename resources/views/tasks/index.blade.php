@@ -2,8 +2,10 @@
 <style>
 .testimonials
 {
-	width: 80%;
+	width: 90%;
 	margin: 60px auto;
+	display: grid;
+	grid-gap: 20px;
 }
 .ready{
 	--card-bg-color: green;
