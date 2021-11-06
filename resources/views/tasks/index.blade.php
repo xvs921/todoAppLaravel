@@ -5,7 +5,7 @@
 	width: 90%;
 	margin: 60px auto;
 	display: grid;
-	grid-template-columns: repeat( auto-fit, minmax(400px, 1600px));
+	grid-template-columns: repeat( auto-fit, minmax(350px, 1fr));
 	grid-gap: 20px;
 }
 .ready{
@@ -17,7 +17,7 @@
 .testimonials .card
 {
 	position: relative;
-	width: 90%;
+	width: 350px;
 	margin: 0 auto;
 	background: var(--card-bg-color);
 	padding: 20px;
@@ -47,7 +47,7 @@
 	<h1>{{ $title }}</h1>
     <div class='testimonials'>
     @foreach($tasks as $t)
-		<div class="{{ $t->completedClassFind() }}">
+		<div class="{{ $t->completedClassFind() }} col-lg-2 col-md-6">
 			<div class="content" id="todo{{ $t->id }}">
 				<h3>{{ $t->title }}</h3>
 				<p>{{ $t->description }}</p>
