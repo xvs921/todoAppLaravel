@@ -82,5 +82,5 @@
 @endsection
 
 @if (isset($message))
-	<script>alert(<?php echo $message; ?>)</script>
+	<script>alert(<?php echo "'".$message."'"; ?>)</script>
 @endif
