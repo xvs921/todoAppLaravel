@@ -48,6 +48,7 @@ class TasksController extends Controller
         ]);
         
         Task::create([
+            'title' => request('title'),
             'description' => request('description'),
         ]);
 

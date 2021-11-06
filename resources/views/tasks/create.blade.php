@@ -6,6 +6,8 @@
   <form method="POST" action="/tasks">
     @csrf
     <div class="form-group">
+      <label for="title">Task title</label>
+      <input class="form-control" name="title" />
       <label for="description">Task Description</label>
       <input class="form-control" name="description" />
     </div>
