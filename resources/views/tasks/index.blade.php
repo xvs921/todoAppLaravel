@@ -69,3 +69,7 @@
     @endforeach
     </div>
 @endsection
+<script>
+	let a = screen.width;
+	let b = screen.height;
+</script>
