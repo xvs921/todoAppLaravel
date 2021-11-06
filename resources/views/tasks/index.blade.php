@@ -30,7 +30,7 @@
 	position: relative;
 	z-index: 2;
 }
-.testimonials .card .content .button
+.testimonials .card .content .buttons
 {
 	display: flex;
 }
