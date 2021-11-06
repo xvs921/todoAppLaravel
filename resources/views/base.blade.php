@@ -12,7 +12,8 @@
             background: lightyellow;
           }
           .navbar-mystyle{ 
-            height: 20% !important;
+            font-size: 44px;
+            height: 12% !important;
             background: yellow !important;
           }
         </style>
