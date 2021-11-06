@@ -31,6 +31,7 @@
 {
 	display: flex;
 	justify-content: space-between;
+	margin-bottom: 5px;
 }
 .testimonials .card .content h3
 {
