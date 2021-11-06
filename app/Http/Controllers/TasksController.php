@@ -88,7 +88,7 @@ class TasksController extends Controller
     public function delete($id) {
         $task = Task::where('id', $id)->first();
         $task->delete();
-        return redirect()->back()->with('success', 'success delete');
+        return redirect()->back()->with('message', $message);
     }
 
     public function openEdit($id) {
