@@ -26,14 +26,14 @@
 	box-shadow: 0 10px 40px rgba(0,0,0,.5);
 	overflow: hidden;
 	border-radius: 20px;
+	flex-direction: column;
+	display: flex;
 }
 .testimonials .card .content .buttons
 {
 	display: flex;
 	justify-content: space-between;
-	margin-top: 10px;
-	position: absolute; 
-	bottom: 0; 
+	justify-content: flex-end;
 }
 .testimonials .card .content h3
 {
