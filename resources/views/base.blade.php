@@ -9,6 +9,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <style>
           body{ 
+            width: 100% !important;
             background: lightyellow;
           }
           .navbar-mystyle{
@@ -21,7 +22,7 @@
             font-size: 30px !important;
           }
           .container{
-            width: 100%;
+            width: 100% !important;
           }
         </style>
     </head>
